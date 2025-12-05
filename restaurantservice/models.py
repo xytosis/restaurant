@@ -1,7 +1,14 @@
 from django.db import models
+import uuid
 
 class Restaurant(models.Model):
     """Basic information about the restaurant."""
+    guid = models.UUIDField(
+        default=uuid.uuid4,
+        editable=False,
+        unique=True,
+        verbose_name="GUID"
+    )
     name = models.CharField(max_length=200)
     address = models.TextField()
     phone_number = models.CharField(max_length=15)
@@ -14,6 +21,12 @@ class Restaurant(models.Model):
 
 class Staff(models.Model):
     """Employee details."""
+    guid = models.UUIDField(
+        default=uuid.uuid4,
+        editable=False,
+        unique=True,
+        verbose_name="GUID"
+    )
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE, related_name='staff_members')
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
@@ -36,6 +49,12 @@ class Staff(models.Model):
 
 class Table(models.Model):
     """Represents a physical table in the restaurant."""
+    guid = models.UUIDField(
+        default=uuid.uuid4,
+        editable=False,
+        unique=True,
+        verbose_name="GUID"
+    )
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE, related_name='tables')
     number = models.IntegerField(unique=True)
     capacity = models.IntegerField(default=2)
@@ -53,6 +72,12 @@ class Table(models.Model):
 
 class Reservation(models.Model):
     """Tracks a customer's booking for a table."""
+    guid = models.UUIDField(
+        default=uuid.uuid4,
+        editable=False,
+        unique=True,
+        verbose_name="GUID"
+    )
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE, related_name='reservations')
     customer_name = models.CharField(max_length=200)
     customer_phone = models.CharField(max_length=15)
