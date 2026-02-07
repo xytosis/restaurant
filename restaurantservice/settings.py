@@ -16,7 +16,8 @@ import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGOUT_REDIRECT_URL = 'login'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
@@ -27,7 +28,8 @@ SECRET_KEY = 'django-insecure-vbk*sw)!6vay2-o1w4=4yxv7x^w3@j=n!fx-sb+l4o!r@(e%s2
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'tollbit-restaurant-4c18e658137d.herokuapp.com'
+    'tollbit-restaurant-4c18e658137d.herokuapp.com',
+    'localhost',
 ]
 
 

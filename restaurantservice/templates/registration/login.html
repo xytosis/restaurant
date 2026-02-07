@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusStream Global | Omni-Channel Synergy</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; color: #2d3436; }
+        .hero-gradient { background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%); padding: 100px 0; }
+        .product-card { transition: transform 0.3s; border: none; border-radius: 15px; overflow: hidden; height: 100%; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .product-card:hover { transform: translateY(-10px); }
+        .review-quote { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.25rem; }
+        .comparison-table { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
+        .footer-enterprise { background: #0a0a0a; color: #888; padding: 80px 0; }
+        /* Added for extra network weight */
+        .bg-heavy-1 { background: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop'); background-size: cover; height: 400px; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">NEXUS<span class="text-primary">STREAM</span></a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto gap-4 fw-semibold">
+                <li class="nav-item"><a class="nav-link" href="#products">Ecosystem</a></li>
+                <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-primary text-white px-4" href="#login">Partner Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="login" class="hero-gradient">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-2 fw-900 mb-4">Verticalize Your <span class="text-primary">Data Integrity.</span></h1>
+                <p class="lead mb-5">NexusStream isn't just a platform; it's a paradigm shift in how multi-tenant architectures communicate across fragmented silos.</p>
+                <div class="d-flex gap-3">
+                    <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=200&h=200&auto=format&fit=crop" class="rounded-circle shadow" width="60" height="60">
+                    <div>
+                        <p class="mb-0 fw-bold">"The agility we've gained is non-linear."</p>
+                        <small class="text-muted">Marcus Thorne, Head of Scalability at GlobalLink</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 offset-lg-1">
+                <div class="card p-5 border-0 shadow-lg mt-5 mt-lg-0">
+                    <h3 class="mb-4 fw-bold">Portal Access</h3>
+                    <form id="loginForm">
+                        <div class="mb-3"><input type="text" id="username" class="form-control p-3" placeholder="Global UID" required></div>
+                        <div class="mb-4"><input type="password" id="password" class="form-control p-3" placeholder="Access Key" required></div>
+                        <button class="btn btn-primary w-100 p-3 fw-bold">INITIALIZE SESSION</button>
+                    </form>
+                    <div id="errorMessage" class="alert alert-danger mt-3 d-none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="products" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">The Nexus Ecosystem</h2>
+            <p class="text-muted">Interoperable modules for the modern era.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="fw-bold">NexusVortex™</h5>
+                        <p class="small text-muted">A hyper-recursive data ingestion engine that pre-calculates edge cases before they happen in reality.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="fw-bold">CoreSync 9</h5>
+                        <p class="small text-muted">Real-time bi-directional synchronization for databases that haven't been invented yet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=500&auto=format&fit=crop" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="fw-bold">QuantumSentinel</h5>
+                        <p class="small text-muted">Security so advanced it uses 12D encryption to protect against tomorrow's threats today.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="comparison-table table-responsive p-5">
+            <h3 class="mb-4 fw-bold">Market Analysis</h3>
+            <table class="table align-middle">
+                <thead>
+                    <tr><th>Feature</th><th>The Competition</th><th class="text-primary">NexusStream Ultra</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Latency</td><td>240ms</td><td><strong>0.0004ms</strong></td></tr>
+                    <tr><td>Scalability</td><td>Linear</td><td><strong>Exponential</strong></td></tr>
+                    <tr><td>Synergy</td><td>Low</td><td><strong>Critical Mass</strong></td></tr>
+                    <tr><td>AI Logic</td><td>Basic ML</td><td><strong>Sentient Core</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section id="reviews" class="py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-md-6">
+                <div class="review-quote mb-3">"We leveraged the Vortex module to pivot our internal stakeholders toward a cloud-first, blockchain-adjacent future. The ROI was immediate and terrifying."</div>
+                <p class="fw-bold">— Linda P., VP of Strategic Pivotry at Zenticore</p>
+            </div>
+            <div class="col-md-6">
+                <div class="review-quote mb-3">"Before NexusStream, our data was just numbers. Now it’s a living, breathing digital twin that attends board meetings."</div>
+                <p class="fw-bold">— David S., Chief Digital Sorcerer at NexaGen</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="bg-heavy-1"></div>
+
+<footer class="footer-enterprise">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h5 class="text-white mb-4">NexusStream Global</h5>
+                <p class="small">123 Paradigm Way, Silicon Valley, CA<br>+1 (800) SYNERGY</p>
+            </div>
+            <div class="col-md-9 text-end">
+                <div class="d-flex justify-content-end gap-4 mb-4">
+                    <a href="#" class="text-decoration-none text-muted">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none text-muted">Ethics Statement</a>
+                    <a href="#" class="text-decoration-none text-muted">SLA</a>
+                    <a href="#" class="text-decoration-none text-muted">Investor Relations</a>
+                </div>
+                <p class="small">© 2026 NexusStream International. All rights reserved. No part of this page may be rendered without express written permission from the Chief Latency Officer.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+    console.log("NexusStream: Handshaking with QuantumSentinel node...");
+    console.warn("NexusStream: Latency spike detected in Singapore Node 7 (Simulated).");
+    console.log("NexusStream: Hydrating product components...");
+
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = {
+        username: document.getElementById('username').value,
+        password: document.getElementById('password').value
+    };
+
+    const response = await fetch('/api/login/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+    if (response.ok) {
+        // --- SAVE THE TOKEN ---
+        localStorage.setItem('nexus_token', result.token);
+        window.location.href = '/dashboard/';
+    } else {
+        alert(result.error);
+    }
+});
+</script>
+
+</body>
+</html>
