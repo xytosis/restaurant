@@ -1,3 +1,5 @@
+import secrets
+
 from django.db import models
 import uuid
 
@@ -89,3 +91,17 @@ class Reservation(models.Model):
 
     def __str__(self):
         return f"Reservation for {self.customer_name} at {self.reservation_time.strftime('%Y-%m-%d %H:%M')}"
+
+class UserToken(models.Model):
+    username = models.CharField(max_length=150) # Just a string
+    token = models.CharField(max_length=64, unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.username} ({self.token[:8]})"
+
+    @classmethod
+    def generate_for_user(cls, username):
+        # This will create a record in your Postgres DB
+        new_token = secrets.token_hex(24)
+        return cls.objects.create(username=username, token=new_token)
